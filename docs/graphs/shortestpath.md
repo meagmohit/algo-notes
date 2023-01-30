@@ -1,21 +1,13 @@
 ---
 layout: default
 title: Single-Source Shortest Path Algorithms
-nav_order: 4
+parent: Graphs
+nav_order: 2
 ---
 
 
 
 # Single-Source Shortest Path Algorithms
-
-<details open markdown="block">
-  <summary>
-    Table of contents
-  </summary>
-  {: .text-delta }
-1. TOC
-{:toc}
-</details>
 
 Given the starting vertex, can you find the shortest path to any of the vertices in a **weighted** graph
 
@@ -23,7 +15,7 @@ Given the starting vertex, can you find the shortest path to any of the vertices
 
 
 
-## Dijakstra Algorithm
+## Dijkstra Algorithm
 
 Greedy approach, for graphs with only non-negative edges to determine the shortest path between source vertex to all other vertices 
 

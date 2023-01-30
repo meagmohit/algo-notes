@@ -1,10 +1,12 @@
 ---
 layout: default
-title: Graphs
-nav_order: 2
+title: Union-Find Disjoin Sets
+parent: Graphs
+nav_order: 1
 ---
 
 # Union-Find Disjoin Sets
+
 Disjoint Sets are used to address the connectivity in the network. How to quickly check whether two vertices are connected or not (in a graph, not via direct edge). Two Important functions are:
 - **Find:** finds the root node of a given vertex. Root node is difference from parent node.
 - **Union:** Joins two vertices by making their root node same.
@@ -15,14 +17,19 @@ There are four different kinds of implementations.
 3. **Union by Rank:** `rank` refers to the height of each vertex. When we `union`, we choose the root node of the vertex with the larger rank, i.e. merge the shorter tree under the taller tree.
 4. **Union by Rank with Path Compress Optimization:** To find the root node we’re traversing the parents node sequentially, until we reach the root node. These operations are repeated in the Union by Rank method, and hence path compression method removes the redundancy by assigning the root in find function. 
 
-### Complexity Analysis
-| Algorithm    | Constructor       | Find   | Union  | Connected | 
-|:-------------|:------------------|:-------|
-| ok           | good swedish fish | nice   |
-| out of stock | good and plenty   | nice   |
-| ok           | good `oreos`      | hmm    |
-| ok           | good `zoute` drop | yumm   |
-  
+### Complexity Analysis 
+
+| Algorithm                                              | Constructor | Find        | Union | Connected |
+| :----------------------------------------------------- | :---------- | :---------- | ----- | --------- |
+| Quick Find                                             | O(N)        | O(1)        | O(N) | O(1) |
+| Quick Union                                            | O(N)        | O(N)        | O(1) | O(N) |
+| Union by Rank                                          | O(N)        | O(logN)     | O(logN) | O(logN) |
+| Union by Rank with <br />Path Compression Optimization | O(N)        | O(aN)[^aN] | O(aN)[^aN] | O(aN)[^aN] |
+
+[^aN]: a refers to the invese ackermann function. In practice, O(aN) is regarded as O(1) on average.
+
+
+
 ```python
 # Implementing Quick Find
 class UnionFind:
