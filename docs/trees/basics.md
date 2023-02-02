@@ -5,8 +5,6 @@ parent: Trees
 nav_order: 1
 ---
 
-
-
 # Trees
 
 **Complete Binary Tree:** Each level has all of its nodes. For the last level, the nodes are filled left to right.
@@ -18,7 +16,7 @@ nav_order: 1
 ### Representation 1: List of List
 
 ```
-[ root, [left subtree], [rightsubtree]]
+[ root, [left subtree], [right subtree]]
 ```
 ### Representation 2: Nodes and References
 
@@ -42,7 +40,7 @@ class BinaryTree:
 
 {: .note }
 
->  Inorder traversal is not a unique identifier of BST. At the same time, both preorder and postorder traversal are unique identifiers of BST. [[Ref]](https://leetcode.com/problems/convert-sorted-array-to-binary-search-tree/solutions/422736/official-solution/ )
+>   [Inorder traversal is not a unique identifier of BST. At the same time, both preorder and postorder traversal are unique identifiers of BST](https://leetcode.com/problems/convert-sorted-array-to-binary-search-tree/solutions/422736/official-solution/ )
 >
 > - `inorder = sorted(preorder) = sorted(postorder)`
 > - For BT, a tree can be made via inorder+preorder or inorder+postorder
