@@ -2,7 +2,7 @@
 layout: default
 title: Union-Find Disjoin Sets
 parent: Graphs
-nav_order: 1
+nav_order: 4
 ---
 
 # Union-Find Disjoin Sets

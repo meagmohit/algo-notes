@@ -1,7 +1,8 @@
 ---
 layout: default
 title: Bit Manipulations
-nav_order: 3
+parent: Algorithms
+nav_order: 6
 ---
 
 # Bit Manipulations

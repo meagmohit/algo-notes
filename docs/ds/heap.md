@@ -1,8 +1,8 @@
 ---
 layout: default
-title: Heaps Basics
-parent: Heaps
-nav_order: 1
+title: Heaps
+parent: Data Structures
+nav_order: 3
 ---
 
 # Heaps
@@ -76,3 +76,10 @@ class minHeap:
 		for i in range(self.size//2,0,-1):
 			self.percDown(i)
 ```
+
+
+
+# References
+
+- [Runstone Academy PythonDS Book Chapter 7.8-7.10: Priority Queues](https://runestone.academy/ns/books/published/pythonds/Trees/PriorityQueueswithBinaryHeaps.html)
+- 

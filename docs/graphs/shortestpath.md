@@ -2,7 +2,7 @@
 layout: default
 title: Single-Source Shortest Path Algorithms
 parent: Graphs
-nav_order: 2
+nav_order: 5
 ---
 
 

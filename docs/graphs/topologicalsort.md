@@ -2,7 +2,7 @@
 layout: default
 title: Topological Sorting
 parent: Graphs
-nav_order: 3
+nav_order: 6
 ---
 
 

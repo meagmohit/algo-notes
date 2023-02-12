@@ -2,18 +2,8 @@
 layout: default
 title: Tricks
 parent: Algorithms
-nav_order: 15
+nav_order: 13
 ---
-
-## [Math] Check if a number is perfect square
-We add 0.5 to avoid the floating point values for very large numbers [[Ref]](https://djangocentral.com/python-program-to-check-if-a-number-is-perfect-square/)
-```python
-def check_square (num ):
-root = sqrt(num)
-int(root + 0.5) ∗∗ 2 == num
-```
-
-
 
 ## [Graph] Word Ladder Graph
 
@@ -48,6 +38,8 @@ In Linked List, a cycle can be detected by using two pointers, one fast (2x spee
 **How to detect the beginning point of cycle?**
 
 Let us consider the two pointers met at node `h`. There are `F` nodes out of the cycle and `(a + b)` nodes inside the cycle. Since, the two pointers met at `h`,
+
+
 $$
 \begin{aligned}
     2*(F+a) &= F + a + b + a,    \; \; mod(a+b) \\
@@ -66,7 +58,16 @@ $$
 
 The next function of linked list can be emulated in arrays using `nums[nums[i]]`. In an `n + 1` element array with elements ranging from `1`to `n`, if there is an element in the array repeated multiple times, it can be detected using the same idea. [[Leetcode #287]](https://leetcode.com/problems/find-the-duplicate-number/)
 
+## [Misc] Exactly K to Atmost(K)
+For some problems, it is better to convert exactly K solution to a difference of atmost(K) - atmost(K-1).  For example, consider problem [78], finding the atleast K is easy.
+[[Leetcode #992]](https://leetcode.com/problems/subarrays-with-k-different-integers/) 
 
+{: .warning}
+To-DO
 
+## [Misc] Finding Top-K
 
+{: .warning}
+
+To-DO
 

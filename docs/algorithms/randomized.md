@@ -2,7 +2,7 @@
 layout: default
 title: Randomized Algorithms
 parent: Algorithms
-nav_order: 5
+nav_order: 8
 ---
 
 # Randomized Algorithms
@@ -59,3 +59,10 @@ def shuffle(arr):
 		arr[idx], arr[rand_idx] = arr[rand_idx], arr[idx]
 	return arr
 ```
+
+
+
+# References
+
+- [Reservoir Sampling](https://www.geeksforgeeks.org/reservoir-sampling/ )
+- [Fisher–Yates Shuffle Algorithm](https://www.geeksforgeeks.org/shuffle-a-given-array-using-fisher-yates-shuffle-algorithm/)

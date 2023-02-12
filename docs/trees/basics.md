@@ -1,8 +1,8 @@
 ---
 layout: default
-title: Trees Basics
+title: Basics
 parent: Trees
-nav_order: 1
+nav_order: 2
 ---
 
 # Trees
@@ -44,3 +44,11 @@ class BinaryTree:
 >
 > - `inorder = sorted(preorder) = sorted(postorder)`
 > - For BT, a tree can be made via inorder+preorder or inorder+postorder
+
+
+
+# References
+
+- [Runstone Academy PythonDS Book Chapter 7: Trees](https://runestone.academy/ns/books/published/pythonds/Trees/toctree.html)
+- 
+

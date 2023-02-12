@@ -2,12 +2,23 @@
 layout: default
 title: Math Algorithms
 parent: Algorithms
-nav_order: 5
+nav_order: 7
 ---
 
 # Math Algorithms
 
+## Check if a number is perfect square
+
+We add 0.5 to avoid the floating point values for very large numbers [[Ref]](https://djangocentral.com/python-program-to-check-if-a-number-is-perfect-square/)
+
+```python
+def check_square (num ):
+root = sqrt(num)
+int(root + 0.5) ∗∗ 2 == num
+```
+
 ## Euclidean Algorithm for GCD
+
 If we keep subtracting the small number from the large number, we end up with GCD
 ```python
 def gcd(a,b):	# 	if a > b: a, b = b, a
@@ -137,3 +148,9 @@ def make_permutations(nums):
     dfs()
     return self.out
 ```
+
+## Angular Sweep Algorithm
+
+{: .warning}
+
+To-DO

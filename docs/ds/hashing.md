@@ -1,12 +1,12 @@
 ---
 layout: default
-title: Hashing
+title: Hash Maps
 parent: Data Structures
-nav_order: 1
+nav_order: 2
 
 ---
 
-# Hashing
+# Hash Maps
 
 Data structure is **Hash Table,** where all elements are stored using a **hash function**.
 
@@ -26,9 +26,15 @@ Commonly used hash functions:
 - Quadratic probing: We use a hash function that increments the skip values by 1,3,5,7,9 etc. `𝑟𝑒ℎ𝑎𝑠ℎ(𝑝𝑜𝑠)=(ℎ+𝑖*i)`
 - Chaining: Allowing many items to exist at the same location in the hash table.
 
-**Computation complexity:**
+**Computation Complexity:**
 
 The best case hashing would provide a 𝑂(1). In collision following would hold for average number of comparisons,
 
 - Open Addressing with Linear probing: `0.5*(1+ 1/(1-L))` for successful and `0.5*(1+ 1/(1-L)*(1-L))` for unsuccessful
 - Chaining: `1+0.5*L` for successful and `L` if unsuccessful
+
+
+
+## References
+
+- [Runstone Academy PythonDS Book Chapter 6.5: Hashing](https://runestone.academy/ns/books/published/pythonds/SortSearch/toctree.htmls)

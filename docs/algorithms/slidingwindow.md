@@ -2,7 +2,7 @@
 layout: default
 title: Sliding Window Patterns
 parent: Algorithms
-nav_order: 7
+nav_order: 9
 ---
 
 # Sliding Window Patterns
@@ -58,4 +58,4 @@ Other (Differently Worded) Sliding Window Problems:
 
 References
 
-1. [[Summary of Sliding Window Patterns for Subarray / Substring](https://leetcode.com/tag/two-pointers/discuss/1122776/Summary-of-Sliding-Window-Patterns-for-Subarray-Substring)
+1. [[Summary of Sliding Window Patterns for Subarray / Substring]](https://leetcode.com/tag/two-pointers/discuss/1122776/Summary-of-Sliding-Window-Patterns-for-Subarray-Substring)

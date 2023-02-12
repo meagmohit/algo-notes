@@ -1,8 +1,8 @@
 ---
 layout: default
-title: Sorting
-nav_order: 3
+title: Basics
+nav_order: 2
 has_children: true
 ---
 
-# Sorting
+# Basics

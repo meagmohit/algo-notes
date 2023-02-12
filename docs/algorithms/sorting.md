@@ -1,8 +1,8 @@
 ---
 layout: default
-title: QuickSort
-parent: Sorting
-nav_order: 1
+title: Sorting Algorithms
+parent: Algorithms
+nav_order: 5
 
 
 ---
@@ -27,3 +27,10 @@ def partition(arr, pivot_idx, start, end):
 	arr[store_idx], arr[end] = arr[end], arr[store_idx]
 	return store_idx
 ```
+
+
+
+# References
+
+- [Runstone Academy PythonDS Book Chapter 6.6-6.12: Sorting](https://runestone.academy/ns/books/published/pythonds/SortSearch/toctree.html)
+- 

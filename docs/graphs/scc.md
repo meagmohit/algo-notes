@@ -2,7 +2,7 @@
 layout: default
 title: Strongly Connected Components
 parent: Graphs
-nav_order: 4
+nav_order: 8
 ---
 
 # Strongly Connected Components

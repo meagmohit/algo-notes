@@ -1,7 +1,8 @@
 ---
 layout: default
 title: Python Refresher
-nav_order: 8
+parent: Basics
+nav_order: 4
 
 ---
 

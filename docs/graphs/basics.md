@@ -2,7 +2,7 @@
 layout: default
 title: Graph Basics
 parent: Graphs
-nav_order: 1
+nav_order: 2
 
 ---
 
@@ -34,3 +34,16 @@ The graph abstract data type (ADT) is defined as follows:
 - `getConnections()`
 - `getId()`
 - `getWeight(nbr)`
+
+## Detecting Cycles in a Graph
+
+{: .warning}
+
+To_DO: Both for directed graphs and undirected graphs
+
+
+
+# References
+
+- [Runstone Academy PythonDS Book Chapter 8: Graphs](https://runestone.academy/ns/books/published/pythonds/Graphs/toctree.html)
+- 
