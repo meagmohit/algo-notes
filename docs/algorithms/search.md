@@ -12,8 +12,5 @@ nav_order: 5
 
 
 {: .warning}
-
-
-
 To-DO: Binary search for exact, just less or just right etc.
 

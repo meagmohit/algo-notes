@@ -6,8 +6,11 @@ nav_order: 6
 ---
 
 # Bit Manipulations
+{: .no_toc}
 
 
+1. TOC
+{:toc}
 
 ## Mathematical Operations
 
@@ -65,7 +68,9 @@ def possibleSubsets(A):
 		print(" ")
 ```
 
-### References
 
-[[Bit manipulation by Hackerrank]](https://www.hackerearth.com/practice/notes/bit-manipulation/)
+
+## References
+
+1. [[Bit manipulation by Hackerrank]](https://www.hackerearth.com/practice/notes/bit-manipulation/)
 

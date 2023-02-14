@@ -5,6 +5,9 @@ parent: Algorithms
 nav_order: 13
 ---
 
+1. TOC
+{:toc}
+
 ## [Graph] Word Ladder Graph
 
 Problem Statement: How to make edges for a Graph, in a list of words, where only one character is different? i.e., to add edges between the nodes (words), where only a single character is different.
@@ -59,7 +62,7 @@ $$
 The next function of linked list can be emulated in arrays using `nums[nums[i]]`. In an `n + 1` element array with elements ranging from `1`to `n`, if there is an element in the array repeated multiple times, it can be detected using the same idea. [[Leetcode #287]](https://leetcode.com/problems/find-the-duplicate-number/)
 
 ## [Misc] Exactly K to Atmost(K)
-For some problems, it is better to convert exactly K solution to a difference of atmost(K) - atmost(K-1).  For example, consider problem [78], finding the atleast K is easy.
+For some problems, it is better to convert exactly K solution to a difference of atmost(K) - atmost(K-1).  For example, consider problem https://leetcode.com/problems/subarrays-with-k-different-integers/, finding the atleast K is easy.
 [[Leetcode #992]](https://leetcode.com/problems/subarrays-with-k-different-integers/) 
 
 {: .warning}
@@ -67,7 +70,17 @@ To-DO
 
 ## [Misc] Finding Top-K
 
-{: .warning}
+Find the top $k^{th}$ or top-$k$ elements. [[Leetcode #347]](https://leetcode.com/problems/top-k-frequent-elements/) [[Leetcode #973]](https://leetcode.com/problems/k-closest-points-to-origin/)
 
-To-DO
+**Solution Approach :**
+
+- **Sorting:** Brute force approach is sorting and takes $O(NlogN)$ time
+- **Heaps:** TC:O(NlogK), SC:O(N+K)
+  - Step 1: Do heapify for  $K$ items in the list. TC:$O(K)$
+  - Step 2: Do push and pop operations in the heap according to the value. C:$O(NlogK)$
+- **QuickSelect:** TC is $O(N)$ in average case, and $O(N^2)$ in worst case
+
+
+
+
 

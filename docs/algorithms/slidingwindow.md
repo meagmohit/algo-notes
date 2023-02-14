@@ -6,10 +6,20 @@ nav_order: 9
 ---
 
 # Sliding Window Patterns
+{: .no_toc}
+
+
+1. TOC
+{:toc}
+
+{: .warning}
+
+SECTION INCOMPLETE: Finish the first reference https://leetcode.com/tag/two-pointers/discuss/1122776/Summary-of-Sliding-Window-Patterns-for-Subarray-Substring
+
 
 An abstract concept commonly used in array or string problems. A **window** is a range of elements in the array/string which usually defined by the start and end indices. 
 
-**Problems: **Typically the problems are similar to `(*Longest/Shortest/Number of*) (*Substrings/Subarrays*) with (*At most/Exactly*) K elements that fit (*some condition*)`. Few examples are below,
+**Problems:** Typically the problems are similar to `(*Longest/Shortest/Number of*) (*Substrings/Subarrays*) with (*At most/Exactly*) K elements that fit (*some condition*)`. Few examples are below,
 
 1. Given a string `s`, find the length of the longest substring without repeating characters. [[Leetcode #3]](https://leetcode.com/problems/longest-substring-without-repeating-characters/description/)
 2. Given a string `s` and an integer `k`, return *the length of the longest* *substring* *of* `s` *that contains at most* `k` *distinct characters*. [[Leetcode #340]](https://leetcode.com/problems/longest-substring-with-at-most-k-distinct-characters/)
@@ -49,13 +59,14 @@ def lengthOfLongestSubstringKDistinct(s, k):
 return res
 ```
 
-Other (Differently Worded) Sliding Window Problems:
+**Other (Differently Worded) Sliding Window Problems:**
+
 1. [[Leetcode #1004]](https://leetcode.com/problems/max-consecutive-ones-iii/)
 2. [[Leetcode #904]](https://leetcode.com/problems/fruit-into-baskets/)
 3. [[Leetcode #424]](https://leetcode.com/problems/longest-repeating-character-replacement/)
 
 
 
-References
+# References
 
 1. [[Summary of Sliding Window Patterns for Subarray / Substring]](https://leetcode.com/tag/two-pointers/discuss/1122776/Summary-of-Sliding-Window-Patterns-for-Subarray-Substring)

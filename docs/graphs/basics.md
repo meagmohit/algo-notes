@@ -7,43 +7,71 @@ nav_order: 2
 ---
 
 # Graphs
+{: .no_toc }
 
-**Graph:** `G = (V, E)`, where for graph `G`, `V` is a set of vertices, and `E` is a set of edges. Every edge `E` is a tuple $`(v, w)`$ where $v, w \in V$
+#### Table of contents
+{: .no_toc }
+
+1. TOC
+{:toc}
+
+**Graph:** `G = (V, E)`, where for graph `G`, `V` is a set of vertices, and `E` is a set of edges. Every edge `E` is a tuple `(v, w)` where `v, w` $\in$ `V`
 
 **Subgraph:** A subgraph `s` is a set of edges `e` and vertices `v` such that $e \in E$ and $v \in V$
 
-## Graph ADT
+ **Representation:** Adjacency Matrix and Adjacency List
 
-The graph abstract data type (ADT) is defined as follows:
 
-- `Graph()` creates a new, empty graph.
-- `addVertex(vert)` adds an instance of `Vertex` to the graph.
-- `addEdge(fromVert, toVert)` Adds a new, directed edge to the graph that connects two vertices.
-- `addEdge(fromVert, toVert, weight)` Adds a new, weighted, directed edge to the graph that connects two vertices.
-- `getVertex(vertKey)` finds the vertex in the graph named `vertKey`.
-- `getVertices()` returns the list of all vertices in the graph.
-- `in` returns `True` for a statement of the form `vertex in graph`, if the given vertex is in the graph, `False` otherwise.
 
-### Representation 1: Adjacency Matrix
+## Detecting Cycles in a Directed Graph
+Use DFS and maintain a stack of nodes, if a visited node is present in the stack, cycle detected. [[Leetcode #207]](https://leetcode.com/problems/course-schedule/)
 
-### Representation 2: Adjacency List
+**Time Complexity:** O(V+E) **Space Complexity:**O(V)
 
-**Vertex** class:
+```python
+def DFS(visited, i, stack)
+    visited[i], stack[i] = True, True
+    for j in adj[i]:
+        if not visited[i]:
+            if DFS(visited, j, stack): return True
+        elif stack[j]: return True
+    stack[j]=False
+    return False
+def detectCycle(V, adj):
+    visited, stack = [False]*V, [False]*V
+    for i in range(V):
+        if not visited[i]:
+            if DFS(visited, i, stack): return True
+    return False
+```
 
-- `addNeighbor(nbr,weight=0)`
-- `getConnections()`
-- `getId()`
-- `getWeight(nbr)`
+## Detecting Cycles in an Undirected Graph
 
-## Detecting Cycles in a Graph
+Use DFS and a cycle is present if an adjacent vertex is already visited and is not the parent of
+the current vertex 
 
-{: .warning}
+**Time Complexity:** O(V+E) **Space Complexity:**O(V)
 
-To_DO: Both for directed graphs and undirected graphs
+```python
+def DFS(visited, i, parent)
+    visited[i] = True
+    for j in adj[i]:
+        if not visited[i]:
+            if DFS(visited, j, i): return True
+        elif parent!=j: return True
+    return False
+def detectCycle(V, adj):
+    visited = [False]*V
+    for i in range(V):
+        if not visited[i]:
+            if DFS(visited, i, -1): return True
+    return False
+```
 
 
 
 # References
 
 - [Runstone Academy PythonDS Book Chapter 8: Graphs](https://runestone.academy/ns/books/published/pythonds/Graphs/toctree.html)
-- 
+- [Detect Cycles in a directed graph](https://www.geeksforgeeks.org/detect-cycle-in-a-graph/)
+- [Detect Cycles in an undirected graph](https://www.geeksforgeeks.org/detect-cycle-undirected-graph/)

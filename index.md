@@ -6,7 +6,7 @@ description: "Landing Page"
 permalink: /
 ---
 
-<button class="btn js-toggle-dark-mode">Preview dark color scheme</button>
+<button class="btn js-toggle-dark-mode">Switch to Dark Theme</button>
 
 <script>
 const toggleDarkMode = document.querySelector('.js-toggle-dark-mode');
@@ -14,12 +14,14 @@ const toggleDarkMode = document.querySelector('.js-toggle-dark-mode');
 jtd.addEvent(toggleDarkMode, 'click', function(){
   if (jtd.getTheme() === 'dark') {
     jtd.setTheme('light');
-    toggleDarkMode.textContent = 'Preview dark color scheme';
+    toggleDarkMode.textContent = 'Switch to Dark Theme';
   } else {
     jtd.setTheme('dark');
-    toggleDarkMode.textContent = 'Return to the light side';
+    toggleDarkMode.textContent = 'Return to Light Theme';
   }
 });
 </script>
 
-# Heading 1
+# Data Structures and Algorithms (in Python)
+
+These notes are written in README format, and meant for quick brush-up before the interviews.

@@ -15,6 +15,10 @@ nav_order: 4
 1. TOC
 {:toc}
 
+
+
+**Statistical vs Dynamic Type:** Python exhibits dynamic typing, i.e., no need to indicate the type of the object.
+
 ## Python Data Types
 
 - **Built-in atomic data types:** `int`, `float`, and `bool`
@@ -121,6 +125,46 @@ def compare (item1 , item2):
 	return 0
 words.sort(cmp = compare)
 ```
+___
+
+## Python is call by value or call by reference?
+Python is neither *call by value* or *call by reference*. We can say that python is *call by object reference*. [[Ref1]](http://stupidpythonideas.blogspot.com/2013/11/does-python-pass-by-value-or-by.html) [[Ref2]](https://jeffknupp.com/blog/2012/11/13/is-python-callbyvalue-or-callbyreference-neither/) [[Ref3]](https://robertheaton.com/2014/02/09/pythons-pass-by-object-reference-as-explained-by-philip-k-dick/) [[Ref4]](http://foobarnbaz.com/2012/07/08/understanding-python-variables/)
+
+**How does variables work in python?** In Python, variables work as tags. When an assignment is
+performed in python, it tags the value with the variable name. When a variable is updated, it just changes
+the tag to the new value in memory. (If a value is in the memory without any tags, the python garbage
+collector will automatically free the memory). The idea of tagging is also called binding, where an object is
+binded to a name. Consider the following code:
+```python
+a = 1 
+a = 2 
+```
+The first line creates a value 1 in memory and tags it with `a`. The second line creates a value 2 in memory and tags it with `a`. Since, the tag for value 1 is not available anymore, python garbage collector frees the memory.
+```python
+a = 10 
+b = a
+```
+This code will assign two tags `b` and `a` to the value 10. To finally understand, consider the following code:
+```python
+def spam(eggs):
+  eggs.append(1)
+  eggs = [2, 3]
+ham = [0]
+spam(ham)
+print(ham)
+```
+The output of the program would be $[0,1]$. The idea of binding can be tested as follows,
+
+```python
+a, b = 10, 10
+print id(a), id(b) #same
+```
+{: .note}
+Note on `id(x)` behavior: The behavior of `id(x)` might not be consistent for large number depending upon the large numbers of large strings.
+
+___
+
+
 
 
 ## Classes

@@ -8,6 +8,9 @@ nav_order: 2
 
 # Hash Maps
 
+{: .warning}
+SECTION INCOMPLETE: Review Content and Add
+
 Data structure is **Hash Table,** where all elements are stored using a **hash function**.
 
 **Load factor:** # of items/ Table Size
@@ -34,6 +37,14 @@ The best case hashing would provide a 𝑂(1). In collision following would hold
 - Chaining: `1+0.5*L` for successful and `L` if unsuccessful
 
 
+
+**Implementation:**
+
+Can be implemented using a hash function (simply modulo operation with prime number) and various approach for collision handling.
+
+- *Separate Chaining:* For values with the same hash key, we keep them in a bucket, and each bucket is independent from each other. We can use Array + LinkedList for this task. [[Leetcode #705]](https://leetcode.com/problems/design-hashset/)
+- *Open Addressing:* Whenever there is a collision, we keep on probing on the main space with certain strategy until a free slot is found.
+- *2-Choice Hashing:* We use two hash functions rather than one, and we pick the generated address with fewer collision.
 
 ## References
 

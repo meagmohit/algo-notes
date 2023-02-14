@@ -6,9 +6,17 @@ nav_order: 3
 
 ---
 
-# **Breadth-First Search (BFS)**
+# Graph Search Algorithms
+{: .no_toc }
+
+#### Table of contents
+{: .no_toc }
+
+1. TOC
+{:toc}
 
 
+# Breadth-First Search (BFS)
 
 ## Generic BFS Template
 
@@ -54,7 +62,7 @@ Example: Navigating a 2D grid with an option of eliminating at-most `k` obstacle
 
 
 
-# **Depth-First Search (DFS)**
+# Depth-First Search (DFS)
 
 
 

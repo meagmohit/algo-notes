@@ -6,6 +6,10 @@ nav_order: 7
 ---
 
 # Math Algorithms
+{: .no_toc}
+
+1. TOC
+{:toc}
 
 ## Check if a number is perfect square
 
@@ -150,7 +154,16 @@ def make_permutations(nums):
 ```
 
 ## Angular Sweep Algorithm
+Given `n` points on 2-D plane, find the maximum number of points that can be enclosed by a fixed-radius circle of radius `R` [[Leetcode #1453]](https://leetcode.com/problems/maximum-number-of-darts-inside-of-a-circular-dartboard/) 
 
-{: .warning}
+**Naive Algorithm:**  Time Complexity is $O(N^3)$
 
-To-DO
+1. Pick any two points, and make a circle with these two points on the circumference. There will be two circles like that.
+2. Find how many points lie inside this circle and return the maximum value
+
+**Angular Sweep Algorithm:**  Time Complexity is $O(N^2 log(N))$
+
+1. For every point, a circle can be defined and rotated such that the given point lies on the circumference.
+2. For rest of the points, find the angles when they enter or exit the circle.
+
+[[Detailed Mathemtical Analysis and Code]](https://www.geeksforgeeks.org/angular-sweep-maximum-points-can-enclosed-circle-given-radius/)

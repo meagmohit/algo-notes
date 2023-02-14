@@ -6,18 +6,21 @@ nav_order: 4
 ---
 
 # Union-Find Disjoin Sets
+{: .no_toc }
 
-Disjoint Sets are used to address the connectivity in the network. How to quickly check whether two vertices are connected or not (in a graph, not via direct edge). Two Important functions are:
+#### Table of contents
+{: .no_toc }
+
+1. TOC
+{:toc}
+
+Disjoint Sets are used to address the connectivity in the network. How to quickly check whether two vertices are connected or not (in a graph, not via direct edge). [[Ref]](https://www.geeksforgeeks.org/disjoint-set-data-structures/) [[Leetcode #952]](https://leetcode.com/problems/largest-component-size-by-common-factor/) Two Important functions are:
 - **Find:** finds the root node of a given vertex. Root node is difference from parent node.
 - **Union:** Joins two vertices by making their root node same.
 
 There are four different kinds of implementations. 
-1. **Quick Find:** Store the `root` indexes in root array such that the `find` operation is O(1)
-2. **Quick Union:** Store the immediate parent index in `root` array such that `union` operation is O(1)
-3. **Union by Rank:** `rank` refers to the height of each vertex. When we `union`, we choose the root node of the vertex with the larger rank, i.e. merge the shorter tree under the taller tree.
-4. **Union by Rank with Path Compress Optimization:** To find the root node we’re traversing the parents node sequentially, until we reach the root node. These operations are repeated in the Union by Rank method, and hence path compression method removes the redundancy by assigning the root in find function. 
 
-### Complexity Analysis 
+**Implementations and Complexity Analysis** 
 
 | Algorithm                                              | Constructor | Find        | Union | Connected |
 | :----------------------------------------------------- | :---------- | :---------- | ----- | --------- |
@@ -28,6 +31,10 @@ There are four different kinds of implementations.
 
 [^aN]: a refers to the invese ackermann function. In practice, O(aN) is regarded as O(1) on average.
 
+
+
+## Quick Find
+Store the `root` indexes in root array such that the `find` operation is O(1)
 
 
 ```python
@@ -51,6 +58,11 @@ class UnionFind:
 		return self.root[x] == self.root[y]
 ```
 
+___
+## Quick Union
+
+Store the immediate parent index in `root` array such that `union` operation is O(1)
+
 ```python
 # Implementing Quick Union
 class UnionFind:
@@ -71,6 +83,13 @@ class UnionFind:
 	def connected(self, x, y):
 		return self.find[x] == self.find[y]
 ```
+
+___
+
+## Union by Rank
+
+`rank` refers to the height of each vertex. When we `union`, we choose the root node of the vertex with the larger rank, i.e. merge the shorter tree under the taller tree.
+
 
 ```python
 # Implementing Union by Rank
@@ -99,6 +118,12 @@ class UnionFind:
 	def connected(self, x, y):
 		return self.root[x] == self.find[y]
 ```
+
+___
+
+## Union by Rank with Path Compress Optimization
+
+To find the root node we’re traversing the parents node sequentially, until we reach the root node. These operations are repeated in the Union by Rank method, and hence path compression method removes the redundancy by assigning the root in find function. 
 
 ```python
 # Implementing Union by Rank with Path Compress Optimization

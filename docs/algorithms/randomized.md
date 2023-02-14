@@ -6,6 +6,10 @@ nav_order: 8
 ---
 
 # Randomized Algorithms
+{: .no_toc}
+
+1. TOC
+{:toc}
 
 ## Reservoir Sampling
 

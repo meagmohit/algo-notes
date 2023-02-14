@@ -7,6 +7,14 @@ nav_order: 7
 
 # Minimum Spanning Tree
 
+{: .no_toc }
+
+#### Table of contents
+{: .no_toc }
+
+1. TOC
+{:toc}
+
 A **spanning tree** is a connected subgraph in an undirected graph where all vertices are connected with minimum number of edges. **Minimum Spanning Tree** is a spanning tree with minimum possible total edge weight in a *weighted undirected graph*.
 
 ### Cut Property
